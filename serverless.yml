@@ -12,11 +12,6 @@ provider:
   runtime: nodejs6.10
   region: eu-central-1
 
-plugins:
-  - serverless-plugin-iopipe
-custom:
-  iopipeToken: ${file(./config.yml):IOPIPE_TOKEN}
-
 functions:
   proxy:
     handler: handler.proxy
@@ -25,5 +20,4 @@ functions:
           path: /
           method: any
     environment:
-      URL: ${file(./config.yml):URL}
-      AWS_SIGN_REQUESTS: ${file(./config.yml):AWS_SIGN_REQUESTS}
+      URL: https://getpocket.com
