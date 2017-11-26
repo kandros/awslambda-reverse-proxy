@@ -10,7 +10,7 @@ service: awslambda-rproxy
 provider:
   name: aws
   runtime: nodejs6.10
-  region: us-west-1
+  region: eu-central-1
 
 plugins:
   - serverless-plugin-iopipe
